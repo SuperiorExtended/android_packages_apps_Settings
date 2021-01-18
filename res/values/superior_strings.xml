@@ -292,4 +292,8 @@
     <string name="navbar_category">Navigation bar</string>
     <string name="hide_navbar_gesture_bar_title">Enable gesture bar</string>
     <string name="hide_navbar_gesture_bar_summary">Enable the gesture bar at the bottom of the screen</string>
+
+    <!-- FastCharge feature -->
+    <string name="fast_charging_title">Fast charging</string>
+    <string name="fast_charging_summary">Disable to reduce the heat produced by the device while charging or to extend the lifespan of the battery</string>
 </resources>
