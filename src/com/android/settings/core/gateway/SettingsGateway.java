@@ -183,6 +183,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.superior.lab.SuperiorLab;
 import com.superior.lab.fragments.SmartPixels;
+import com.android.settings.superior.tether.WifiTetherClientManager;
 
 public class SettingsGateway {
 
@@ -355,6 +356,7 @@ public class SettingsGateway {
             RunningServices.class.getName(),
             SleepMode.class.getName(),
             SmartPixels.class.getName(),
+            WifiTetherClientManager.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
