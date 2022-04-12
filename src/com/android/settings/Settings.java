@@ -526,4 +526,7 @@ public class Settings extends SettingsActivity {
     public static class SuperiorLabActivity extends SettingsActivity {}
 
     public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
+
+    // SleepMode
+    public static class SleepModeActivity extends SettingsActivity {}
 }
