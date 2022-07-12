@@ -60,9 +60,6 @@
      <string name="storage_warning_internal">Warning: This option may not work properly or lead to
           data loss and is therefore not recommended!</string>
 
-     <!-- Summary for list to control apps that ignore battery saving restrictions -->
-     <string name="high_power_apps_summary">Battery optimization availability</string>
-
      <!-- Superior Lab -->
      <string name="superior_lab_dash_title">Superior Lab</string>
 
@@ -461,4 +458,7 @@
     <string name="wifi_hotspot_unblock_client_dialog_title">Unblock device</string>
     <string name="wifi_hotspot_unblock_client_dialog_text">The device \"<xliff:g id="device_name">%1$s</xliff:g>\" will be able to connect to this hotspot</string>
     <string name="wifi_hotspot_client_manager_footer_text">No clients are currently available. Connected and blocked devices will be listed here when available.</string>
+    
+    <!-- Summary for list to control apps that ignore battery saving restrictions -->
+    <string name="high_power_apps_summary">Battery optimization availability</string>
 </resources>
