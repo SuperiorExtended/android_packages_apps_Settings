@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:background="@drawable/superior_card"
-    android:layout_height="80dp"
+    android:layout_height="98dp"
     android:elevation="0dp"
     android:layout_marginHorizontal="16dp"
     android:layout_marginBottom="10dp">
@@ -12,8 +12,6 @@
          android:layout_width="match_parent"
          android:layout_height="match_parent"
          app:cardElevation="0dp"
-         app:strokeColor="?android:attr/textColorPrimary"
-         app:strokeWidth="4dp"
          app:cardCornerRadius="32dp">
 
         <com.radiant.utils.bannerHeaderView
@@ -22,8 +20,8 @@
             android:scaleType="centerCrop"
             android:gravity="center"
             android:elevation="0dp"
-            android:foreground="@drawable/wallpaper_scrim"
-            android:background="@drawable/wallpaper_scrim"
+            android:foreground="#6B000000"
+            android:background="#6B000000"
             android:contentDescription="@null"
             android:orientation="horizontal" />
 
@@ -41,7 +39,8 @@
                 android:textAlignment="center"
                 android:gravity="center"
                 android:singleLine="true"
-                android:textColor="#FFFFFF"
+                android:textColor="#d3FFFFFF"
+                android:textSize="23sp"
                 style="@style/text_style" />               
          </LinearLayout>
      </com.google.android.material.card.MaterialCardView>

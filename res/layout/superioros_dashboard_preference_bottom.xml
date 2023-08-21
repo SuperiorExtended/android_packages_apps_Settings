@@ -14,7 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     style="@style/superiorDashboardPreferenceBottom"
     android:layout_width="match_parent"
@@ -25,4 +25,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+	<LinearLayout
+    	android:layout_width="wrap_content"
+    	android:layout_height="match_parent"
+    	android:gravity="end|center_vertical"
+    	android:minWidth="64dp"
+    	android:orientation="horizontal"
+    	android:layout_marginEnd="16dp">
+
+    	<!-- Empty View to push CardView to the right side -->
+    	<View
+        	android:layout_width="0dp"
+        	android:layout_height="0dp"
+        	android:layout_weight="0.5" /> <!-- Adjust the layout_weight (increase/decrease as needed) -->
+
+	    <androidx.cardview.widget.CardView
+        	android:layout_width="28dp"
+        	android:layout_height="28dp"
+        	app:cardBackgroundColor="@color/superior_background1"
+        	app:cardElevation="0dp"
+        	app:cardCornerRadius="99dp">
+
+	        <ImageView
+    	        android:layout_width="24dp"
+        	    android:layout_height="24dp"
+            	android:layout_gravity="center"
+            	android:src="@drawable/superior_chevron_right"
+            	android:tint="?android:attr/textColorPrimary" />
+	    </androidx.cardview.widget.CardView>
+	</LinearLayout>
 </FrameLayout>
