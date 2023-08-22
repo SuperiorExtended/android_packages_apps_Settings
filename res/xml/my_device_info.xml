@@ -48,18 +48,6 @@
         settings:enableCopying="true"
         settings:layout="@layout/superioros_dashboard_preference_middle" />
 
-    <!-- Model & hardware -->
-    <Preference
-        android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
-        android:icon="@drawable/ic_settings_system_dashboard_acc"
-        android:key="device_model"
-        android:summary="@string/model_summary"
-        android:title="@string/model_name"
-        settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"
-        settings:enableCopying="true"
-        settings:keywords="@string/keywords_model_and_hardware"
-        settings:layout="@layout/superior_dashboard_preference_middle" />
-
     <!-- Android version -->
     <Preference
         android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
@@ -71,6 +59,18 @@
         settings:layout="@layout/superior_dashboard_preference_bottom" />
 
     <!-- Bottom category -->
+	<!-- Model & hardware -->
+    <Preference
+        android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
+        android:icon="@drawable/ic_settings_system_dashboard_acc"
+        android:key="device_model"
+        android:summary="@string/model_summary"
+        android:title="@string/model_name"
+        settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"
+        settings:enableCopying="true"
+        settings:keywords="@string/keywords_model_and_hardware"
+        settings:layout="@layout/superior_dashboard_preference_top" />
+
     <!-- Device up time -->
     <Preference
         android:icon="@drawable/ic_uptime"
@@ -78,8 +78,7 @@
         android:selectable="false"
         android:summary="@string/summary_placeholder"
         android:title="@string/status_up_time"
-        settings:layout="@layout/superioros_dashboard_preference_top" />
-
+        settings:layout="@layout/superioros_dashboard_preference_middle" />
 
     <!-- Legal information -->
     <Preference
