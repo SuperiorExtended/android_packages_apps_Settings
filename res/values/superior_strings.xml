@@ -8,6 +8,7 @@
      <!-- About phone screen, Superior OS version -->
      <string name="superior_version">SuperiorOS version</string>
      <string name="superior_version_default">Unknown</string>
+     <string name="SpOS_Ext_summary">https://t.me/superiorextendedsg</string>
      <string name="keywords_superior_version">SuperiorOS version, superior version</string>
 
      <!-- About phone screen, build date -->
