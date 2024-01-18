@@ -24,8 +24,6 @@ import android.widget.TextView;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
-import androidx.preference.PreferenceScreen;
-
 import com.android.settings.R;
 import com.android.settings.utils.SuperiorSpecUtils;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -50,7 +48,7 @@ public class SuperiorInfoPreferenceController extends AbstractPreferenceControll
         final TextView battery = (TextView) superiorInfoPreference.findViewById(R.id.battery_type_message);
         final TextView infoScreen = (TextView) superiorInfoPreference.findViewById(R.id.screen_message);
         processor.setText(SuperiorSpecUtils.getProcessorModel());
-        storage.setText(String.valueOf(SuperiorSpecUtils.getTotalInternalMemorySize()) + "GB ROM + " + SuperiorSpecUtils.getTotalRAM() + " RAM");
+        storage.setText(String.valueOf(SuperiorSpecUtils.getTotalInternalMemorySize()) + "GB ROM | " + SuperiorSpecUtils.getTotalRAM() + " RAM");
         battery.setText(SuperiorSpecUtils.getBatteryCapacity(mContext) + " mAh");
         infoScreen.setText(SuperiorSpecUtils.getScreenRes(mContext));
     }
