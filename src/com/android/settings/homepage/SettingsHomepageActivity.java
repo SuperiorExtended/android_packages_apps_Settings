@@ -168,13 +168,20 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         }
         Log.i(TAG, "showHomepageWithSuggestion: " + showSuggestion);
         final View homepageView = mHomepageView;
-        mSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
-        mTwoPaneSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
+        if (mSuggestionView != null) {
+        	mSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
+        }
+
+    	if (mTwoPaneSuggestionView != null) {
+        	mTwoPaneSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
+        }
         mHomepageView = null;
 
         mLoadedListeners.forEach(listener -> listener.onHomepageLoaded());
         mLoadedListeners.clear();
+        if (homepageView != null) {
         homepageView.setVisibility(View.VISIBLE);
+      }
     }
 
     /** Returns the main content fragment */
@@ -471,9 +478,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         if (fragmentClass == null) {
             return;
         }
-        
-        mSuggestionView = findViewById(R.id.suggestion_content);
-        mTwoPaneSuggestionView = findViewById(R.id.two_pane_suggestion_content);
+
         mHomepageView = findViewById(R.id.settings_homepage_container);
         // Hide the homepage for preparing the suggestion. If scrolling is needed, the list views
         // should be initialized in the invisible homepage view to prevent a scroll flicker.
@@ -481,12 +486,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         // Schedule a timer to show the homepage and hide the suggestion on timeout.
         mHomepageView.postDelayed(() -> showHomepageWithSuggestion(false),
                 HOMEPAGE_LOADING_TIMEOUT_MS);
-        showFragment(new SuggestionFragCreator(fragmentClass, /* isTwoPaneLayout= */ false),
-                R.id.suggestion_content);        
-        if (mIsEmbeddingActivityEnabled) {
-            showFragment(new SuggestionFragCreator(fragmentClass, /* isTwoPaneLayout= */ true),
-                    R.id.two_pane_suggestion_content);
-        }
     }
 
     private <T extends Fragment> T showFragment(FragmentCreator<T> fragmentCreator, int id) {
