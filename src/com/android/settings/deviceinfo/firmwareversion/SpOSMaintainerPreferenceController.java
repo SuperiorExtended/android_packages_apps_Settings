@@ -17,8 +17,11 @@
 package com.android.settings.deviceinfo.firmwareversion;
 
 import android.content.Context;
-import android.os.SystemProperties;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.preference.Preference;
 
@@ -28,19 +31,24 @@ import com.android.settings.core.BasePreferenceController;
 public class SpOSMaintainerPreferenceController extends BasePreferenceController {
 
     private static final String TAG = "SpOSMaintainerPreferenceController";
-    private static final String ROM_PROPERTY = "ro.spos.maintainer";
+
+    private String mDeviceMaintainer;
 
     public SpOSMaintainerPreferenceController(Context context, String key) {
         super(context, key);
+        mDeviceMaintainer = mContext.getResources().getString(R.string.SpOS_maintainer_summary);
     }
 
+    @Override
     public int getAvailabilityStatus() {
+        if (mDeviceMaintainer.equalsIgnoreCase("UNKNOWN")) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
         return AVAILABLE;
     }
 
+    @Override
     public CharSequence getSummary() {
-        String rom = SystemProperties.get(ROM_PROPERTY,
-                this.mContext.getString(R.string.device_info_default));
-        return rom;
+        return mDeviceMaintainer;
     }
 }
