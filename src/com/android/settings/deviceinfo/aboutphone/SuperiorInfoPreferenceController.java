@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2020 Wave-OS
  * Copyright (C) 2021 ShapeShiftOS
+ * Copyright (C) 2024 SuperiorExtended-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +18,6 @@
 
 package com.android.settings.deviceinfo.aboutphone;
 
-import java.io.IOException;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.widget.TextView;
@@ -28,8 +28,6 @@ import com.android.settings.R;
 import com.android.settings.utils.SuperiorSpecUtils;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.widget.LayoutPreference;
-import com.android.settingslib.Utils;
-import com.android.settings.core.PreferenceControllerMixin;
 
 public class SuperiorInfoPreferenceController extends AbstractPreferenceController {
 
@@ -43,14 +41,20 @@ public class SuperiorInfoPreferenceController extends AbstractPreferenceControll
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         final LayoutPreference superiorInfoPreference = screen.findPreference(KEY_SUPERIOR_INFO);
-        final TextView processor = (TextView) superiorInfoPreference.findViewById(R.id.processor_message);
-        final TextView storage = (TextView) superiorInfoPreference.findViewById(R.id.storage_code_message);
-        final TextView battery = (TextView) superiorInfoPreference.findViewById(R.id.battery_type_message);
-        final TextView infoScreen = (TextView) superiorInfoPreference.findViewById(R.id.screen_message);
-        processor.setText(SuperiorSpecUtils.getProcessorModel());
-        storage.setText(String.valueOf(SuperiorSpecUtils.getTotalInternalMemorySize()) + "GB ROM | " + SuperiorSpecUtils.getTotalRAM() + " RAM");
-        battery.setText(SuperiorSpecUtils.getBatteryCapacity(mContext) + " mAh");
-        infoScreen.setText(SuperiorSpecUtils.getScreenRes(mContext));
+
+        if (superiorInfoPreference != null) {
+            final TextView processor = superiorInfoPreference.findViewById(R.id.processor_message);
+            final TextView storageAndRAM = superiorInfoPreference.findViewById(R.id.storage_code_message);
+            final TextView battery = superiorInfoPreference.findViewById(R.id.battery_type_message);
+            final TextView infoScreen = superiorInfoPreference.findViewById(R.id.screen_message);
+
+            Context context = superiorInfoPreference.getContext();
+
+            processor.setText(SuperiorSpecUtils.getProcessorModel(context));
+            storageAndRAM.setText(SuperiorSpecUtils.getStorageAndRAMInfo(context));
+            battery.setText(SuperiorSpecUtils.getBatteryInfo(context));
+            infoScreen.setText(SuperiorSpecUtils.getScreenRes(context));
+        }
     }
 
     @Override
