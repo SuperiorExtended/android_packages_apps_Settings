@@ -19,7 +19,7 @@
      <dimen name="fingerprint_find_sensor_padding_top">16dp</dimen>
 
      <!-- circle avatar size dimensions-->
-     <dimen name="circle_avatar_size">40dp</dimen>
+     <dimen name="circle_avatar_size">100dp</dimen>
     
     <!-- xd. Preference Card -->
      <dimen name="xd_pref_card_radius">28dp</dimen>
