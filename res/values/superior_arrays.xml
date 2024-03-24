@@ -16,38 +16,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Random summary -->
-    <string-array name="superiorlab_summaries">
-        <item>@string/superiorlab_summaries_1</item>
-        <item>@string/superiorlab_summaries_2</item>
-        <item>@string/superiorlab_summaries_3</item>
-        <item>@string/superiorlab_summaries_4</item>
-        <item>@string/superiorlab_summaries_5</item>
-        <item>@string/superiorlab_summaries_6</item>
-        <item>@string/superiorlab_summaries_7</item>
-        <item>@string/superiorlab_summaries_8</item>
-        <item>@string/superiorlab_summaries_9</item>
-        <item>@string/superiorlab_summaries_10</item>
-        <item>@string/superiorlab_summaries_11</item>
-        <item>@string/superiorlab_summaries_12</item>
-        <item>@string/superiorlab_summaries_13</item>
-        <item>@string/superiorlab_summaries_14</item>
-        <item>@string/superiorlab_summaries_15</item>
-        <item>@string/superiorlab_summaries_16</item>
-        <item>@string/superiorlab_summaries_17</item>
-        <item>@string/superiorlab_summaries_18</item>
-        <item>@string/superiorlab_summaries_19</item>
-        <item>@string/superiorlab_summaries_20</item>
-        <item>@string/superiorlab_summaries_21</item>
-        <item>@string/superiorlab_summaries_22</item>
-        <item>@string/superiorlab_summaries_23</item>
-        <item>@string/superiorlab_summaries_24</item>
-        <item>@string/superiorlab_summaries_25</item>
-        <item>@string/superiorlab_summaries_26</item>
-        <item>@string/superiorlab_summaries_27</item>
-        <item>@string/superiorlab_summaries_28</item>
-        <item>@string/superiorlab_summaries_29</item>
-    </string-array>
+     <!-- Random summary -->
+     <string-array name="superiorlab_summaries">
+          <item>Warning: Insanely cool stuff ahead!</item>
+          <item>We hope you enjoy being Extended!</item>
+          <item>Some interesting tagline. Blah blah blah...</item>
+          <item>Its features lickin\' good</item>
+          <item>Look out! Behind you!</item>
+          <item>Some assembly required</item>
+          <item>No stopping or standing</item>
+          <item>Never eat anything bigger than your head</item>
+          <item>Customize till you want it</item>
+          <item>Think less, customize more</item>
+          <item>FBI: Feature Base Isolation</item>
+          <item>This is what awesome looks like</item>
+          <item>Don\'t dream it. Do it</item>
+     </string-array>
 
     <!-- Back swipe actions -->
     <string-array name="swipe_actions_entries" translatable="false">
